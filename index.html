@@ -572,13 +572,13 @@
         <div class="contact-content">
             <p>I'm passionate about AI development, community-focused technology, and building systems that work for real people. Let's collaborate on innovative projects that make a difference!</p>
             
-            <form class="contact-form">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true">
                 <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
                 </div>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Tell me about your project or opportunity..." required></textarea>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                 <button type="submit" class="submit-btn">Start a Conversation</button>
             </form>
         </div>
@@ -647,11 +647,10 @@
         // Initialize particles when page loads
         window.addEventListener('load', createParticles);
 
-        // Form submission
+        // Form submission - now handled by Netlify
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
+            // Let Netlify handle the form submission
+            // The form will redirect to a thank you page or show Netlify's default success message
         });
 
         // Project card click effects
