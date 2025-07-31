@@ -68,6 +68,33 @@
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
+            position: relative;
+        }
+
+        /* Custom styling for the j with spinning world dot */
+        .custom-j {
+            position: relative;
+            display: inline-block;
+        }
+
+        .world-dot {
+            position: absolute;
+            top: -0.15em;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.25em;
+            animation: spin 3s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes spin {
+            from { transform: translateX(-50%) rotate(0deg); }
+            to { transform: translateX(-50%) rotate(360deg); }
+        }
+
+        .dotless-j {
+            color: transparent;
+            text-shadow: 0 0 0 white;
         }
 
         .hero .subtitle {
@@ -438,7 +465,7 @@
     <section id="home" class="hero">
         <div class="particles"></div>
         <div class="hero-content">
-            <h1>AjamCodes</h1>
+            <h1>A<span class="custom-j"><span class="dotless-j">J</span><span class="world-dot">🌍</span></span>am Codes</h1>
             <p class="subtitle">Where meaning meets motion.</p>
             <p style="font-size: 1.1rem; margin-top: 1rem; opacity: 0.9;">Developer, systems thinker, and LLM explorer using tech to build things.</p>
             <a href="#projects" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Explore My Work</a>
@@ -586,7 +613,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 AjamCodes. Rooted in ethics. Powered by curiosity.</p>
+        <p>&copy; 2025 A<span class="custom-j"><span class="dotless-j">J</span><span class="world-dot">🌍</span></span>am Codes. Rooted in ethics. Powered by curiosity.</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/amy-erdt-b02210342/" title="LinkedIn" target="_blank">💼</a>
             <a href="https://github.com/Ameee6" title="GitHub" target="_blank">🐙</a>
